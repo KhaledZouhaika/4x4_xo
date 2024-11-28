@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".PvP" />
+        <activity android:name=".DifficultySelectionActivity" />
+        <activity android:name=".ModeSelectionActivity" />
+        <activity android:name=".GeneralQ" />
     </application>
 
 </manifest>

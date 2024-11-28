@@ -1,302 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
 
-    <!-- TextView to show the current player's turn -->
     <TextView
-        android:id="@+id/playerTurn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Player X's Turn"
-        android:textSize="20sp"
-        android:textColor="#333333"
-        android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentTop="true" />
+        android:text="Choose Game Mode"
+        android:textSize="24sp"
+        android:layout_marginBottom="32dp"
+        android:textStyle="bold"/>
 
-    <!-- TextView to display the countdown timer -->
-    <TextView
-        android:id="@+id/timerTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Time left: 5s"
-        android:textSize="18sp"
-        android:textColor="#D32F2F"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/playerTurn"
-        android:layout_marginTop="8dp"/>
-
-    <!-- GridLayout for Tic-Tac-Toe buttons with dividers -->
-    <GridLayout
-        android:id="@+id/gridLayout"
+    <Button
+        android:id="@+id/btnPlayWithAI"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/timerTextView"
-        android:layout_marginTop="20dp"
-        android:rowCount="7"
-        android:columnCount="7"
-        >
+        android:layout_height="wrap_content"
+        android:text="Play with AI"
+        android:layout_marginBottom="16dp"/>
 
-        <!-- Row 1 -->
-        <Button
-            android:id="@+id/button00"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+    <Button
+        android:id="@+id/generaledi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" General Quistions"
+        android:layout_marginBottom="16dp"/>
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
+    <Button
+        android:id="@+id/mathedi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=" Math Qustion "/>
 
-        <Button
-            android:id="@+id/button01"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
 
-        <Button
-            android:id="@+id/button02"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button03"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <!-- Horizontal Divider Row -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"
-            android:layout_columnSpan="7" />
-
-        <!-- Row 2 - Buttons and Dividers (repeat structure for each row) -->
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button12"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button13"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <!-- Horizontal Divider Row -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"
-            android:layout_columnSpan="7" />
-        <!-- Row 3 -->
-        <Button
-            android:id="@+id/button20"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button21"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button22"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button23"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <!-- Horizontal Divider Row -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"
-            android:layout_columnSpan="7" />
-
-        <!-- Row 4 -->
-        <Button
-            android:id="@+id/button30"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button31"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button32"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button33"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-    </GridLayout>
-
-</RelativeLayout>
-
+</LinearLayout>
