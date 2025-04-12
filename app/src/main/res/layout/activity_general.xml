@@ -1,302 +1,170 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5">
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="#FFFFFF"
+    android:padding="16dp">
 
-    <!-- TextView to show the current player's turn -->
     <TextView
         android:id="@+id/playerTurn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Player X's Turn"
-        android:textSize="20sp"
-        android:textColor="#333333"
+        android:fontFamily="casual"
+        android:text="Player vs Player!"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
         android:textStyle="bold"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="16dp"
-        android:layout_alignParentTop="true" />
+        android:textColor="#9C27B0"
+        android:shadowColor="#673AB7"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3" />
 
-    <!-- TextView to display the countdown timer -->
     <TextView
         android:id="@+id/timerTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Time left: 5s"
+        android:fontFamily="casual"
+        android:text="Time to explore: 5s"
         android:textSize="18sp"
-        android:textColor="#D32F2F"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/playerTurn"
-        android:layout_marginTop="8dp"/>
+        android:textColor="#9C27B0"
+        android:layout_marginBottom="16dp" />
 
-    <!-- GridLayout for Tic-Tac-Toe buttons with dividers -->
-    <GridLayout
-        android:id="@+id/gridLayout"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/timerTextView"
-        android:layout_marginTop="20dp"
-        android:rowCount="7"
-        android:columnCount="7"
-        >
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="24dp"
+        app:cardElevation="8dp">
 
-        <!-- Row 1 -->
-        <Button
-            android:id="@+id/button00"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button01"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button02"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button03"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <!-- Horizontal Divider Row -->
-        <View
+        <GridLayout
+            android:id="@+id/gridLayout"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"
-            android:layout_columnSpan="7" />
+            android:layout_height="match_parent"
+            android:rowCount="4"
+            android:columnCount="4"
+            android:background="#FFFFFF"
+            android:padding="8dp">
 
-        <!-- Row 2 - Buttons and Dividers (repeat structure for each row) -->
-        <Button
-            android:id="@+id/button10"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+            <!-- Row 0 -->
+            <Button
+                android:id="@+id/button00"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
+            <Button
+                android:id="@+id/button01"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <Button
-            android:id="@+id/button11"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/button02"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
+            <Button
+                android:id="@+id/button03"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <Button
-            android:id="@+id/button12"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/button10"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
+            <Button
+                android:id="@+id/button11"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <Button
-            android:id="@+id/button13"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/button12"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <!-- Horizontal Divider Row -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"
-            android:layout_columnSpan="7" />
-        <!-- Row 3 -->
-        <Button
-            android:id="@+id/button20"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/button13"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
+            <Button
+                android:id="@+id/button20"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <Button
-            android:id="@+id/button21"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/button21"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
+            <Button
+                android:id="@+id/button22"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <Button
-            android:id="@+id/button22"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/button23"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
+            <Button
+                android:id="@+id/button30"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <Button
-            android:id="@+id/button23"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/button31"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <!-- Horizontal Divider Row -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="@color/black"
-            android:layout_columnSpan="7" />
+            <Button
+                android:id="@+id/button32"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <!-- Row 4 -->
-        <Button
-            android:id="@+id/button30"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/button33"
+                style="@style/OceanButtonStyle"
+                android:layout_rowWeight="1"
+                android:layout_columnWeight="1" />
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
+        </GridLayout>
+    </androidx.cardview.widget.CardView>
 
-        <Button
-            android:id="@+id/button31"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Explore Again!"
+        android:textSize="24sp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/rounded_button_ocean"
+        android:textColor="#FFFFFF"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="48dp"
+        android:elevation="8dp"
+        android:stateListAnimator="@null" />
 
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button32"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-        <View
-            android:layout_width="2dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:background="@color/black" />
-
-        <Button
-            android:id="@+id/button33"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_rowWeight="1"
-            android:layout_columnWeight="1"
-            android:background="@android:color/transparent"
-            android:textSize="24sp"
-            android:textColor="@android:color/black"/>
-
-    </GridLayout>
-
-</RelativeLayout>
-
+</LinearLayout>

@@ -4,34 +4,46 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="24dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Select Difficulty"
-        android:textSize="24sp"
-        android:layout_marginBottom="32dp"
-        android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/btnEasy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Easy"
-        android:layout_marginBottom="16dp" />
-
-    <Button
-        android:id="@+id/btnMedium"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Medium"
-        android:layout_marginBottom="16dp" />
-
-    <Button
-        android:id="@+id/btnHard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Hard" />
+    android:padding="32dp"
+    android:background="#FFFFFF"> <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Challenge Yourself!"
+    android:textSize="30sp"
+    android:layout_marginBottom="40dp"
+    android:textStyle="bold"
+    android:textColor="#9C27B0"/> <Button
+    android:id="@+id/btnEasy"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="😊 Easy Peasy!"
+    android:textSize="18sp"
+    android:padding="16dp"
+    android:layout_marginBottom="20dp"
+    android:backgroundTint="#9C27B0"
+    android:textColor="#FFFFFF"
+    android:elevation="4dp"
+    android:stateListAnimator="@null" /> <Button
+    android:id="@+id/btnMedium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="🤔 Getting Tricky!"
+    android:textSize="18sp"
+    android:padding="16dp"
+    android:layout_marginBottom="20dp"
+    android:backgroundTint="#9C27B0"
+    android:textColor="#FFFFFF"
+    android:elevation="4dp"
+    android:stateListAnimator="@null" /> <Button
+    android:id="@+id/btnHard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="🤯 Super Brain Time!"
+    android:textSize="18sp"
+    android:padding="16dp"
+    android:backgroundTint="#9C27B0"
+    android:textColor="#FFFFFF"
+    android:elevation="4dp"
+    android:stateListAnimator="@null" />
 
 </LinearLayout>

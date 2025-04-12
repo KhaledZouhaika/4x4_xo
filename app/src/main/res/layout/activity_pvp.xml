@@ -1,54 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp">
+    android:gravity="center_horizontal"
+    android:background="#FFFDE7">
 
+    <!-- Title Text -->
     <TextView
         android:id="@+id/statusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Tic-Tac-Toe Game"
-        android:textSize="20sp"
+        android:text="Player vs Player!"
+        android:textSize="36sp"
         android:textAlignment="center"
-        android:layout_marginBottom="16dp" />
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="32dp"
+        android:textStyle="bold"
+        android:textColor="#9C27B0"
+        android:shadowColor="#673AB7"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="5" />
 
-    <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="match_parent"
+    <!-- CardView for Grid -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:rowCount="4"
-        android:columnCount="4">
+        app:cardCornerRadius="24dp"
+        app:cardElevation="12dp"
+        android:layout_margin="1dp">
 
-        <!-- Add 16 buttons in a 4x4 grid -->
-        <Button android:id="@+id/button00" style="@style/GameButton" />
-        <Button android:id="@+id/button01" style="@style/GameButton" />
-        <Button android:id="@+id/button02" style="@style/GameButton" />
-        <Button android:id="@+id/button03" style="@style/GameButton" />
+        <!-- 4x4 GridLayout -->
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:columnCount="4"
+            android:padding="0dp"
+            android:background="#FFFDE7"
+            android:rowCount="4">
 
-        <Button android:id="@+id/button10" style="@style/GameButton" />
-        <Button android:id="@+id/button11" style="@style/GameButton" />
-        <Button android:id="@+id/button12" style="@style/GameButton" />
-        <Button android:id="@+id/button13" style="@style/GameButton" />
+            <!-- Row 0 -->
+            <Button
+                android:id="@+id/button00"
+                style="@style/GameButtonStyle" />
 
-        <Button android:id="@+id/button20" style="@style/GameButton" />
-        <Button android:id="@+id/button21" style="@style/GameButton" />
-        <Button android:id="@+id/button22" style="@style/GameButton" />
-        <Button android:id="@+id/button23" style="@style/GameButton" />
+            <Button
+                android:id="@+id/button01"
+                style="@style/GameButtonStyle" />
 
-        <Button android:id="@+id/button30" style="@style/GameButton" />
-        <Button android:id="@+id/button31" style="@style/GameButton" />
-        <Button android:id="@+id/button32" style="@style/GameButton" />
-        <Button android:id="@+id/button33" style="@style/GameButton" />
-    </GridLayout>
+            <Button
+                android:id="@+id/button02"
+                style="@style/GameButtonStyle" />
 
+            <Button
+                android:id="@+id/button03"
+                style="@style/GameButtonStyle" />
+
+            <!-- Row 1 -->
+            <Button
+                android:id="@+id/button10"
+                style="@style/GameButtonStyle" />
+
+            <Button
+                android:id="@+id/button11"
+                style="@style/GameButtonStyle" />
+
+            <Button
+                android:id="@+id/button12"
+
+                style="@style/GameButtonStyle" />
+
+            <Button
+                android:id="@+id/button13"
+                style="@style/GameButtonStyle" />
+
+            <!-- Row 2 -->
+            <Button
+                android:id="@+id/button20"
+                style="@style/GameButtonStyle" />
+
+            <Button
+                android:id="@+id/button21"
+                style="@style/GameButtonStyle" />
+
+            <Button
+                android:id="@+id/button22"
+                style="@style/GameButtonStyle" />
+
+            <Button
+                android:id="@+id/button23"
+                style="@style/GameButtonStyle" />
+
+            <!-- Row 3 -->
+            <Button
+                android:id="@+id/button30"
+                style="@style/GameButtonStyle" />
+
+            <Button
+                android:id="@+id/button31"
+                style="@style/GameButtonStyle" />
+
+            <Button
+                android:id="@+id/button32"
+                style="@style/GameButtonStyle" />
+
+            <Button
+                android:id="@+id/button33"
+                style="@style/GameButtonStyle" />
+
+        </GridLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Restart Button -->
     <Button
         android:id="@+id/restartButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Restart Game"
-        android:layout_marginTop="16dp"/>
+        android:text="Play Again!"
+        android:textSize="24sp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_button_background"
+        android:textColor="#FFFFFF"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="48dp"
+        android:elevation="12dp"
+        android:stateListAnimator="@null" />
 
 </LinearLayout>

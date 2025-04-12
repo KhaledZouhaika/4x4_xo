@@ -4,36 +4,44 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:padding="24dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose Game Mode"
-        android:textSize="24sp"
-        android:layout_marginBottom="32dp"
-        android:textStyle="bold"/>
-
-    <Button
-        android:id="@+id/btnPlayWithAI"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Play with AI"
-        android:layout_marginBottom="16dp"/>
-
-    <Button
-        android:id="@+id/generaledi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text=" General Quistions"
-        android:layout_marginBottom="16dp"/>
+    android:padding="32dp"
+    android:background="#FBFBFB"> <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Fun Game Time!"
+    android:textSize="30sp"
+    android:layout_marginBottom="40dp"
+    android:textStyle="bold"
+    android:textColor="#9C27B0"/> <Button
+    android:id="@+id/btnPlayWithAI"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="🤖 Play Against the Computer!"
+    android:textSize="18sp"
+    android:padding="16dp"
+    android:layout_marginBottom="20dp"
+    android:backgroundTint="#9C27B0" android:textColor="#FFFFFF"
+    android:elevation="4dp"
+    android:stateListAnimator="@null" /> <Button
+    android:id="@+id/generaledi"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="💡 Awesome General Knowledge!"
+    android:textSize="18sp"
+    android:padding="16dp"
+    android:layout_marginBottom="20dp"
+    android:backgroundTint="#9C27B0" android:textColor="#FFFFFF"
+    android:elevation="4dp"
+    android:stateListAnimator="@null" />
 
     <Button
         android:id="@+id/mathedi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=" Math Qustion "/>
-
-
+        android:text="➕ Cool Math Challenges!"
+        android:textSize="18sp"
+        android:padding="16dp"
+        android:backgroundTint="#9C27B0" android:textColor="#FFFFFF" android:elevation="4dp"
+        android:stateListAnimator="@null" />
 
 </LinearLayout>

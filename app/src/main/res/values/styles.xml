@@ -1,17 +1,42 @@
 <resources>
-    <style name="ticTacToeButton">
+    <style name="GameButtonStyle">
+        <item name="android:layout_width">75dp</item>
+        <item name="android:layout_height">75dp</item>
+        <item name="android:layout_margin">12dp</item>
+        <item name="android:background">@drawable/game_button_background</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#9C27B0</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="OceanButtonStyle">
         <item name="android:layout_width">0dp</item>
         <item name="android:layout_height">0dp</item>
-        <item name="android:layout_columnWeight">1</item>
-        <item name="android:layout_rowWeight">1</item>
-        <item name="android:textSize">24sp</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="android:background">@color/black</item>
-
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/game_button_background</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
-    <style name="GameButton">
-        <item name="android:layout_width">80dp</item>
-        <item name="android:layout_height">80dp</item>
-        <item name="android:textSize">24sp</item>
+
+
+    <style name="OceanVerticalDivider">
+        <item name="android:layout_width">4dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:background">#0D47A1</item>
+    </style>
+
+    <style name="OceanHorizontalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">4dp</item>
+        <item name="android:background">#0D47A1</item>
+        <item name="android:layout_columnSpan">7</item>
     </style>
 </resources>
